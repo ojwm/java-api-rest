@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 4,
+    "files.associations": {
+        "[Jj]enkinsfile*": "groovy"
+    },
+    "java.configuration.updateBuildConfiguration": "automatic"
+}
