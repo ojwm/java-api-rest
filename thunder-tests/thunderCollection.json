@@ -4,6 +4,21 @@
     "colName": "Vehicles",
     "created": "2022-07-07T12:36:38.073Z",
     "sortNum": 10000,
-    "folders": []
+    "folders": [
+      {
+        "_id": "6187454f-2567-4bd4-9bc5-6bf306e8ef97",
+        "name": "Vans",
+        "containerId": "",
+        "created": "2022-07-07T20:11:21.980Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "de7a495e-364a-447d-83af-28c7d4bbe26a",
+        "name": "Cars",
+        "containerId": "",
+        "created": "2022-07-07T20:11:36.710Z",
+        "sortNum": 5000
+      }
+    ]
   }
 ]

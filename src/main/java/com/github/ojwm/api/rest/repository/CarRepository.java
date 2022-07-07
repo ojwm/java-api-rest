@@ -6,11 +6,11 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.github.ojwm.api.rest.model.Van;
+import com.github.ojwm.api.rest.model.Car;
 
 @RepositoryRestResource
-public interface VanRepository extends PagingAndSortingRepository<Van, Long> {
+public interface CarRepository extends PagingAndSortingRepository<Car, Long> {
 
-    List<Van> findByManufacturerIgnoreCase(@Param("manufacturer") String manufacturer);
-    List<Van> findByModelIgnoreCase(@Param("model") String model);
+    List<Car> findByManufacturerIgnoreCase(@Param("manufacturer") String manufacturer);
+    List<Car> findByModelIgnoreCase(@Param("model") String model);
 }

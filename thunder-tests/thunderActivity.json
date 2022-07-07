@@ -3,14 +3,33 @@
     "_id": "f59af623-e580-4429-8215-9e0149e70388",
     "colId": "history",
     "containerId": "",
-    "name": "{{host}}:{{port}}/vans",
+    "name": "/vans",
     "url": "{{host}}:{{port}}/vans",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-07-07T12:34:35.514Z",
-    "modified": "2022-07-07T12:41:53.463Z",
+    "modified": "2022-07-07T20:06:57.958Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2eb0d23c-73b6-4f2e-a273-9079952c7f38",
+    "colId": "history",
+    "containerId": "",
+    "name": "/vans",
+    "url": "{{host}}:{{port}}/vans",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-07-07T12:34:35.514Z",
+    "modified": "2022-07-07T20:06:52.584Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"manufacturer\": \"Mercedes\",\n  \"model\": \"Sprinter\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
