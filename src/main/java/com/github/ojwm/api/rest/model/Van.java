@@ -1,20 +1,20 @@
 package com.github.ojwm.api.rest.model;
 
-public class Car extends Vehicle {
+public class Van extends Vehicle {
 
     // Attributes
-    private Integer luggageCapacity;
+    private Integer cargoCapacity;
 
     // Getter methods
-    public Integer getLuggageCapacity() {
-        return luggageCapacity;
+    public Integer getCargoCapacity() {
+        return cargoCapacity;
     }
     
     // Private constructor
-    private Car(Builder builder) {
+    private Van(Builder builder) {
         this.manufacturer = builder.manufacturer;
         this.model = builder.model;
-        this.luggageCapacity = builder.luggageCapacity;
+        this.cargoCapacity = builder.cargoCapacity;
     }
 
     // Builder class - using Joshua Bloch’s builder pattern
@@ -22,7 +22,7 @@ public class Car extends Vehicle {
 
         private final String manufacturer;
         private String model;
-        private Integer luggageCapacity;
+        private Integer cargoCapacity;
 
         public Builder(String manufacturer) {
             this.manufacturer = manufacturer;
@@ -33,13 +33,13 @@ public class Car extends Vehicle {
             return this;
         }
 
-        public Builder luggageCapacity(Integer luggageCapacity) {
-            this.luggageCapacity = luggageCapacity;
+        public Builder cargoCapacity(Integer cargoCapacity) {
+            this.cargoCapacity = cargoCapacity;
             return this;
         }
 
-        public Car build() {
-            return new Car(this);
+        public Van build() {
+            return new Van(this);
         }
     }
 }

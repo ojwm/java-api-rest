@@ -11,6 +11,7 @@ public class CarService {
 
         return new Car.Builder("Ford")
                 .model("Focus")
+                .luggageCapacity(375)
                 .build();
     }
 }

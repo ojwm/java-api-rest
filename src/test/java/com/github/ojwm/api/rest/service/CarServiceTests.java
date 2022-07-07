@@ -18,6 +18,7 @@ public class CarServiceTests {
     void getCar() {
         final Car expected = new Car.Builder("Ford")
                 .model("Focus")
+                .luggageCapacity(375)
                 .build();
         final Car actual = carService.getCar();
 
