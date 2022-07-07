@@ -4,9 +4,18 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.Objects;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Vehicle {
 
     // Attributes
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    protected Long id;
     protected String manufacturer;
     protected String model;
 

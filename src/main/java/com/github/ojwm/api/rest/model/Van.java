@@ -1,5 +1,8 @@
 package com.github.ojwm.api.rest.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Van extends Vehicle {
 
     // Attributes
