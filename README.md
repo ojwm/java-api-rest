@@ -39,6 +39,11 @@ podman run --name java-api-rest --publish 8080:8080 java-api-rest
 * Actuator: <http://localhost:8080/v3/api-docs>
 * Swagger UI: <http://localhost:8080/swagger-ui.html>
 
+### REST client
+
+[Thunder Client](https://www.thunderclient.com/) can be used to interact with the API.\
+A predefined collection is saved in [`/thunder-tests`](/thunder-tests).
+
 ## Folder structure
 
 ```sh

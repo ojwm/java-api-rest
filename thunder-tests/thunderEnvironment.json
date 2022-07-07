@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "8c2f52a0-0c15-4e5d-a97e-63f04e7f8a1a",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -1,
+    "created": "2022-07-07T12:39:41.692Z",
+    "modified": "2022-07-07T12:40:11.279Z",
+    "data": [
+      {
+        "name": "host",
+        "value": "localhost"
+      },
+      {
+        "name": "port",
+        "value": "8080"
+      }
+    ]
+  }
+]

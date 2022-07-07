@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "f59af623-e580-4429-8215-9e0149e70388",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}:{{port}}/vans",
+    "url": "{{host}}:{{port}}/vans",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-07T12:34:35.514Z",
+    "modified": "2022-07-07T12:41:53.463Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

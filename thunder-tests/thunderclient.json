@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "344a946a-bb82-4061-9901-2e4e874370e8",
+    "colId": "0d7eb76d-24c5-4be4-9fc4-2533a245a570",
+    "containerId": "",
+    "name": "/vans",
+    "url": "{{host}}:{{port}}/vans",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-07-07T12:36:38.074Z",
+    "modified": "2022-07-07T12:36:38.074Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
