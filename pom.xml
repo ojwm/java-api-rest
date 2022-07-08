@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- See the POM reference for explanation of elements
+https://maven.apache.org/ref/current/maven-model/maven.html -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- Use the parent project for Spring Boot -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.1</version>
 	</parent>
 
+	<!-- See the guidance for naming and versioning
+	https://maven.apache.org/guides/mini/guide-naming-conventions.html -->
 	<groupId>com.github.ojwm.api</groupId>
 	<artifactId>rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rest</name>
+
+	<name>rest-api</name>
 	<description>Demo for Spring Boot RESTful API</description>
 
+	<!-- Properties that can be reused throughout the POM -->
 	<properties>
 		<commons-lang3.version>3.12.0</commons-lang3.version>
 		<dependency-check-maven.version>7.1.1</dependency-check-maven.version>
@@ -25,52 +32,47 @@
 		<springdoc.version>1.6.9</springdoc.version>
 	</properties>
 
+	<!-- Look up dependencies at MVN Repository
+	https://mvnrepository.com/ -->
 	<dependencies>
-		<!-- Spring Boot -->
+		<!-- Core Spring Boot starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- Useful Spring Boot developer tools
+		https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using.devtools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+		<!-- Spring Boot's production-ready features
+		https://spring.io/guides/gs/actuator-service/
+		https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#actuator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<!-- Spring Data JPA with Hibernate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!-- Spring Data repositories over REST using Spring Data REST
+		https://docs.spring.io/spring-data/rest/docs/current/reference/html/ -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
+		<!-- Starter for building web applications using Spring MVC -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- Springdoc -->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-data-rest</artifactId>
-            <version>${springdoc.version}</version>
-        </dependency>
-		<dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>${springdoc.version}</version>
-        </dependency>
-		<!-- Databases -->
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<!-- Testing -->
+		<!-- Starter for testing Spring Boot applications
+		https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#features.testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -90,18 +92,43 @@
 			<version>${junit-jupiter-engine.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Mockito preconfigured inline mock maker
+		Will be merged into mockito-core in future
+		https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#39 -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-inline</artifactId>
 			<version>${mockito-inline.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- Everything else -->
+		<!-- Springdoc OpenAPI UI
+		https://springdoc.org/ -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
+		</dependency>
+		<!-- Springdoc support for types from spring-boot-starter-data-rest -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-data-rest</artifactId>
+			<version>${springdoc.version}</version>
+		</dependency>
+		<!-- H2 lightweight relational database management system -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Java utility classes
+		https://commons.apache.org/proper/commons-lang/ -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
 		</dependency>
+		<!-- Publicly disclosed vulnerability detection
+		https://owasp.org/www-project-dependency-check/ -->
 		<dependency>
 			<groupId>org.owasp</groupId>
 			<artifactId>dependency-check-maven</artifactId>
@@ -111,6 +138,8 @@
 
 	<build>
 		<plugins>
+			<!-- Spring Boot Maven plugin
+			https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/ -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
