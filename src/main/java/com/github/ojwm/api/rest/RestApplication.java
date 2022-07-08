@@ -11,10 +11,19 @@ import io.swagger.v3.oas.models.info.Info;
 @SpringBootApplication
 public class RestApplication {
 
+	/**
+	 * Start the application
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(RestApplication.class, args);
 	}
 
+	/**
+	 * Configure the OpenAPI UI
+	 * @param appVersion Springdoc version
+	 * @return OpenAPI object
+	 */
 	@Bean
 	public OpenAPI customOpenAPI(@Value("${springdoc.version}") String appVersion) {
 		return new OpenAPI().info(new Info()
